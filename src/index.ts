@@ -1,14 +1,6 @@
-import chalk from "chalk";
-import { ChessBoard } from "./chessboard/board";
-import { BreadthFirst } from "./shortestpath/bfs";
-const board = new ChessBoard();
-const bfs = new BreadthFirst();
+import { knightsTrav } from "./KnightsTrav/knightsTrav";
 
-const knightsTrav = (pos: string, pog: string) => {
-  let moves = bfs.breadthFirstSearch(pos, pog);
-  return `${board.printBoard(pos, pog)} and
-  ${moves}`;
-};
+//Below is a chessboard represented in all the strategical positions from which you can move your pieces to and from.
 let cboard = [
   ["a8", "b8", "c8", "d8", "e8", "f8", "g8", "h8"],
   ["a7", "b7", "c7", "d7", "e7", "f7", "g7", "h7"],
@@ -20,4 +12,5 @@ let cboard = [
   ["a1", "b1", "c1", "d1", "e1", "f1", "g1", "h1"],
 ];
 
-console.log(bfs.breadthFirstSearch("a8", "h1"));
+//Go ahead and input the starting position and goal positon as the function params.
+console.log(knightsTrav("", ""));
